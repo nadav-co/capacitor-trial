@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+import { setupConfig } from '@ionic/react';
+
+defineCustomElements(window);
+  setupConfig({
+    mode: "ios"
+  })
 
 ReactDOM.render(
   <React.StrictMode>
